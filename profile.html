@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FIRST CHALLENGE</title>
+    <style>
+      .container {
+        background-color: #f7f3ff;
+        display: block;
+        max-width: 800px;
+        margin: 60px auto;
+      }
+      h1 {
+        background-color: #6d38ee;
+        color: #fff;
+        text-align: center;
+        padding: 25px 20px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 data-testid="slackUserName">Motunrayo Sanni</h1>
+      <img
+        src="images/myImage.jpeg"
+        alt="Motunrayo_Sanni"
+        data-testid="slackDisplayImage"
+      />
+
+      <script data-testid="currentDayOfTheWeek">
+        let myDate = new Date();
+        let myDay = myDate.getDay();
+        // Arrays of days,
+        let weekday = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        document.write("Today is : " + weekday[myDay]);
+        document.write("<br/>");
+      </script>
+      <script data-testid="currentUTCTime">
+        // hour value
+        let hours = myDate.getHours();
+        let ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        let minutes = myDate.getMinutes();
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        let myTime =
+          hours +
+          " " +
+          ampm +
+          " : " +
+          minutes +
+          " : " +
+          myDate.getUTCMilliseconds();
+        document.write("\tCurrent time is : " + myTime);
+      </script>
+      <p data-testid="myTrack"><strong>My Track is : Frontend</strong></p>
+    </div>
+  </body>
+</html>
