@@ -4,83 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FIRST CHALLENGE</title>
-    <style>
-      .container {
-        background-color: #f7f3ff;
-        display: block;
-        max-width: 800px;
-        margin: 60px auto;
-      }
-      h1 {
-        background-color: #6d38ee;
-        color: #f7f3ff;
-        text-align: center;
-        padding: 25px 20px;
-      }
-      img {
-        display: block;
-        margin: 0 auto;
-        width: 200px;
-      }
-      p {
-        color: #6d38ee;
-      }
-      a {
-        text-decoration: none;
-        color: #6d38ee;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <h1 data-testid="slackUserName">Motunrayo Sanni</h1>
-      <img
-        src="images/myImage.jpeg"
-        alt="Motunrayo_Sanni"
-        data-testid="slackDisplayImage"
-      />
-
-      <script data-testid="currentDayOfTheWeek">
-        let myDate = new Date();
-        let myDay = myDate.getDay();
-        // Arrays of days,
-        let weekday = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-        document.write(weekday[myDay]);
-        document.write("<br/>");
-      </script>
-      <script data-testid="currentUTCTime">
-        // hour value
-        let hours = myDate.getHours();
-        let ampm = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        let minutes = myDate.getMinutes();
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        let myTime =
-          hours +
-          " " +
-          ampm +
-          " : " +
-          minutes +
-          " : " +
-          myDate.getUTCMilliseconds();
-        document.write(myTime);
-      </script>
-      <p data-testid="myTrack"><strong>Frontend</strong></p>
-      <a
-        href="https://github.com/cutespot3200/Frontend-Page_Creation.git"
-        target="_blank"
-        data-testid="githubURL"
-        >Click here for a link to the source code</a
-      >
+      <div>
+        <h1 data-testid="slackUserName">Motunrayo Sanni</h1>
+      </div>
+      <div>
+        <img
+          data-testid="slackDisplayImage"
+          src="images/myImage.jpeg"
+          alt="Motunrayo_Sanni"
+        />
+      </div>
+      <div>
+        <p>Current day of the week :</p>
+        <p data-testid="currentDayOfTheWeek"></p>
+      </div>
+      <div>
+        <p>Current UTC Time :</p>
+        <p data-testid="currentUTCTime"></p>
+      </div>
+      <div>
+        <p data-testid="myTrack"><strong>Frontend</strong></p>
+      </div>
+      <div>
+        <a
+          href="https://github.com/cutespot3200/Frontend-Page_Creation.git"
+          target="_blank"
+          data-testid="githubURL"
+          >github Link</a
+        >
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

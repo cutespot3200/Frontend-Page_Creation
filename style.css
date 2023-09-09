@@ -1,0 +1,35 @@
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.container {
+  background-color: #f7f3ff;
+  display: block;
+  max-width: 800px;
+  margin: 60px auto;
+}
+[data-testid="slackUserName"] {
+  background-color: #6d38ee;
+  color: #f7f3ff;
+  text-align: center;
+  padding: 25px 20px;
+}
+[data-testid="slackDisplayImage"] {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+[data-testid="myTrack"] {
+  color: #6d38ee;
+}
+[data-testid="githubURL"] {
+  text-decoration: none;
+  color: #6d38ee;
+}
+[data-testid="currentDayOfTheWeek"] {
+  color: #6d38ee;
+  font-size: 15px;
+}
+[data-testid="currentUTCTime"] {
+  color: #6d38ee;
+  font-size: 15px;
+}
